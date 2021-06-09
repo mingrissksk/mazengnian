@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fon {
+            width: 1800px;
+            height: 2000px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .navigation {
+            width: 100%;
+            height: 70px;
+            background: black;
+            border: black 3px solid;
+            position: relative;
+        }
+
+        .nav1 {
+            width: 800px;
+            float: left;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: white;
+            position: absolute;
+
+        }
+
+        .nav1 div:nth-child(2) a {
+            color: orange;
+            text-decoration: none;
+            font-size: 22px;
+        }
+
+        .nav1 div:nth-child(3) a {
+            color: white;
+            font-size: 22px;
+            text-decoration: none;
+        }
+
+        .nav1 div:nth-child(4) a {
+            color: white;
+            font-size: 22px;
+            text-decoration: none;
+        }
+
+        .nav1 div:nth-child(5) a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        .img1 {
+            height: 70px;
+            margin-left: 50px;
+        }
+
+        .nav2 {
+            width: 360px;
+            float: left;
+            display: flex;
+            margin-top: 30px;
+            justify-content: space-around;
+            margin-left: 800px;
+            position: absolute;
+
+        }
+
+        .nav2 div:nth-child(1) a {
+            font-size: 14px;
+            color: rgb(160, 151, 135);
+            text-decoration: none;
+        }
+
+        .nav2 div:nth-child(2) a {
+            color: rgb(160, 151, 135);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .nav2 div:nth-child(3) a {
+            color: rgb(160, 151, 135);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .nav2 div:nth-child(4) a {
+            color: rgb(160, 151, 135);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .nav2-1 {
+            width: 65px;
+            background-image: url('./images/2.png');
+            background-position: -228px -23px;
+            text-align: right;
+        }
+
+        .nav2-2 {
+            width: 80px;
+            background-image: url('./images/2.png');
+            background-position: -228px -23px;
+            text-align: right;
+        }
+
+        .nav2-3 {
+            width: 70px;
+            background-image: url('./images/2.png');
+            background-position: -231px -23px;
+            text-align: right;
+        }
+
+        .nav2-4 {
+            width: 37px;
+            background-image: url('./images/2.png');
+            background-position: -228px -23px;
+            text-align: right;
+        }
+
+        .nav3 {
+            width: 200px;
+            float: left;
+            margin-top: 25px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: white;
+            margin-left: 65%;
+            position: absolute;
+
+        }
+
+        .nav3 div:nth-child(1) a {
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+        }
+
+        .nav3 div:nth-child(2) a {
+            color: white;
+            font-size: 22px;
+            text-decoration: none;
+        }
+
+        .nav4 {
+            width: 220px;
+            float: left;
+            margin-top: 25px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: white;
+            position: absolute;
+            margin-left: 80%;
+
+        }
+
+        .nav4-1 {
+            background-image: url('./images/4.png');
+            color: gray;
+            width: 176px;
+            height: 24px;
+            padding-left: 5px;
+        }
+
+        .content {
+            width: 100%;
+            height: 1000px;
+        }
+
+        .lyric {
+            width: 55%;
+            height: 805px;
+            margin-left: 5%;
+            float: left;
+            text-align: center;
+            overflow-y: auto;
+        }
+
+        .lyric h1 {
+            margin-top: 7%;
+        }
+
+        .lyric .catalogue p {
+            display: inline;
+        }
+
+        .lyric .catalogue p:nth-child(2n) {
+            color: rgb(202, 132, 3);
+        }
+
+        .lyric .catalogue p:nth-child(7) {
+            color: rgb(202, 132, 3);
+        }
+
+        .lyric .subcategory p {
+            display: inline;
+            font-size: 14px;
+        }
+
+        .lyric .lycontent p {
+            font-size: 18px;
+        }
+
+        .lyric .lycontent p:nth-child(9) {
+            color: rgb(202, 132, 3);
+        }
+
+        .player {
+            width: 35%;
+            height: 805px;
+            float: left;
+            position: relative;
+        }
+
+        .player .music {
+            position: relative;
+        }
+
+        .player .music .music1 {
+            margin-top: 100px;
+            margin-left: 100px;
+            width: 380px;
+            height: 380px;
+            border-radius: 50%;
+            z-index: 996;
+            position: absolute;
+            overflow: hidden;
+
+        }
+
+        @keyframes animation1 {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .record {
+            width: 380px;
+            height: 380px;
+            display: block;
+            padding: 0 auto;
+            animation: animation1 5s linear infinite;
+        }
+
+        .player .music .music1-1 {
+            width: 410px;
+            height: 410px;
+            border: 1px solid paleturquoise;
+            ;
+            border-radius: 50%;
+            z-index: 999;
+            margin-top: 85px;
+            margin-left: 85px;
+            position: absolute;
+        }
+
+        .player .music .music1-2 {
+            width: 30px;
+            height: 30px;
+            border: 1px solid rgba(122, 120, 120);
+            background-color: rgb(248, 246, 246, 0.9);
+            border-radius: 50%;
+            z-index: 1001;
+            margin-top: 275px;
+            margin-left: 275px;
+            position: absolute;
+        }
+
+        .player .music .music1-3 {
+            width: 90px;
+            height: 90px;
+            border: 1px solid rgba(122, 120, 120);
+            background-color: rgb(248, 246, 246, 0.5);
+            border-radius: 50%;
+            z-index: 1000;
+            margin-top: 245px;
+            margin-left: 245px;
+            position: absolute;
+        }
+
+        .player .progress {
+            width: 95%;
+            height: 15%;
+            margin-top: 75%;
+            margin-left: 5%;
+            position: absolute;
+        }
+
+        .player .progress #prograssBar {
+            float: left;
+            width: 58%;
+            height: 4px;
+            position: relative;
+            background: gray;
+            margin-top: 10%;
+            margin-right: 2%;
+            display: inline;
+        }
+
+        .player .progress #wp_bufBar {
+            width: 0px;
+            height: 4px;
+            background: gray;
+        }
+
+        .player .progress .prograssBar {
+            width: 0px;
+            height: 4px;
+            background: orange;
+        }
+
+        .player .progress #wp_processBtn {
+            width: 20px;
+            height: 20px;
+            background-image: url('./images/2.png');
+            position: absolute;
+            background-position: -127px -45px;
+            top: -5px;
+        }
+
+        .play {
+            margin-top: 3%;
+            width: 100px;
+            height: 80px;
+            background-image: url('./images/6.jpg');
+            background-position: -210px 0px;
+            float: left;
+            background-size: 552px 176px;
+        }
+
+        .player .progress .playerRight #wp_playTime {
+            float: left;
+            margin-top: 8%;
+            color: gray;
+            font-size: 24px;
+            width: 12%;
+
+        }
+
+        .player .progress #controllBtn #wp_mute {
+            margin-top: 9%;
+            width: 28px;
+            height: 26px;
+            background-image: url('./images/6.jpg');
+            background-position: -40px 0px;
+            float: left;
+        }
+
+        .player .download {
+            margin-top: 95%;
+            margin-left: 35%;
+            width: 31%;
+            height: 5%;
+            background-image: url('./images/6.jpg');
+            background-position: -275px -134px;
+            position: relative;
+        }
+
+        .player .download .download1 {
+            float: left;
+            width: 20px;
+            height: 20px;
+            background-image: url('./images/2.png');
+            background-position: -47px -15px;
+            margin-top: 5%;
+            margin-left: 20%;
+
+        }
+
+        .player .download .download2 {
+            padding-top: 10px;
+            font-size: 15px;
+
+
+        }
+
+        .player .guoziyi {
+            width: 80%;
+            height: 70px;
+            margin-top: 10%;
+            float: left;
+            margin-left: 20%;
+        }
+
+        .player .guoziyi .gu {
+            width: 70px;
+            height: 70px;
+            background: green;
+            border-radius: 50%;
+            overflow: hidden;
+            float: left;
+            z-index: 100;
+        }
+
+        .player .guoziyi .gu img {
+            width: 80px;
+            height: 90px;
+        }
+
+        .player .guoziyi .gus .gu1 {
+            width: 240px;
+            height: 60px;
+            z-index: 101;
+            margin-left: -90px;
+            margin-top: 100px;
+            transform: rotate(-90deg);
+        }
+
+        .player .guoziyi .gus {
+            width: 64px;
+            height: 270px;
+            float: left;
+            background-image: url('./images/6.jpg');
+            background-size: 690px 276px;
+            background-position: -626px -0px;
+            margin-left: 110px;
+            margin-top: -100px;
+            transform: rotate(90deg);
+        }
+
+        .player .guoziyi .gus .gu1 .gu1-3 p {
+            float: left;
+
+        }
+
+        .player .guoziyi .gus .gu1 .gu1-1 {
+            color: rgb(199, 198, 198);
+
+        }
+
+        .player .guoziyi .gus .gu1 .gu1-3 .gu1-3-1 {
+            color: gray;
+            margin-right: 50px;
+        }
+
+        .player .guoziyi .gus .gu1 .gu1-3 .gu1-3-2 {
+            color: rgb(58, 52, 240);
+        }
+
+        .player .guoziyi .gus .gu1 .gu1-3 .gu1-3-2 p {
+            color: rgb(58, 52, 240);
+        }
+
+        .comment {
+            width: 70%;
+            height: 800px;
+            margin-left: 15%;
+        }
+
+        .comment .title {
+            width: 300px;
+            height: 60px;
+            margin-left: 20px;
+        }
+
+        .comment .title p:nth-child(1) {
+            font-size: 20px;
+            color: gray;
+            float: left;
+            margin-top: 20px;
+            margin-right: 100px;
+        }
+
+        .comment .title p:nth-child(2) {
+            font-size: 15px;
+            margin-top: 24px;
+            color: rgb(182, 181, 181);
+            float: left;
+        }
+
+        .comment .share {
+            width: 100%;
+            height: 300px;
+            position: relative;
+        }
+
+        .comment .share .headPortrait {
+            position: absolute;
+            float: left;
+
+        }
+
+
+        .comment .share .headPortrait .headPortrait1 {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            margin-right: 70px;
+        }
+
+        .comment .share .com {
+            margin-left: 150px;
+            width: 1000px;
+            height: 200px;
+            position: absolute;
+        }
+
+        .comment .share .com #txt {
+            width: 80%;
+            height: 200px;
+            margin: 0px auto;
+            color: grey;
+        }
+
+        .comment .share .com .smile {
+            position: absolute;
+            float: left;
+        }
+
+        .comment .share .com .word {
+            margin-left: 600px;
+            margin-top: 20px;
+            float: left;
+            color: gray;
+        }
+
+        .comment .share .com .btn1 {
+            margin-top: 10px;
+            margin-left: 50px;
+            float: left;
+        }
+
+        .comment .share .com .btn1 .btn1-1 {
+            width: 70px;
+            height: 30px;
+            background-color: orange;
+            border: orange 1px solid;
+            font-size: 17px;
+            border-radius: 10%;
+            color: white;
+        }
+
+        .comment .marvellous {
+            width: 100%;
+            height: 300px;
+        }
+
+        .comment .marvellous .marvellous1 {
+            font-size: 20px;
+            color: gray;
+            margin-left: 20px;
+        }
+
+        .comment .marvellous .marvellous2 {
+            position: relative;
+        }
+
+        .userName {
+            margin-top: 20px;
+            color: rgb(189, 125, 6);
+            margin-left: 100px;
+            margin-bottom: 10px;
+
+        }
+
+        .head1 {
+            float: left;
+            margin-top: 15px;
+
+        }
+
+        .marve {
+            font-size: 11px;
+            margin-left: 100px;
+            margin-bottom: 10px;
+        }
+
+        .realTime {
+            margin-left: 40px;
+            font-size: 9px;
+            color: gray;
+            float: left;
+        }
+
+        .shareCom {
+            margin-top: -60px;
+            margin-left: 80%;
+            font-size: 10px;
+            color: grey;
+        }
+
+        .del {
+            margin-left: 50%;
+            float: left;
+            color: blue;
+        }
+
+        .fabulousCount {
+            margin-left: 55%;
+            margin-top: 45px;
+        }
+
+        .fabulous {
+            margin-left: 71%;
+            margin-top: -25px;
+            float: left;
+            width: 25px;
+            height: 25px;
+
+        }
+
+        .reply {
+            margin-left: 79%;
+            margin-top: -25px;
+        }
+
+        .paging {
+            width: 25%;
+            height: 80px;
+            margin-left: 35%;
+        }
+
+        .paging div {
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            background-color: rgb(196, 194, 194);
+            float: left;
+            margin-right: 10px;
+        }
+
+        .paging div:nth-child(5) {
+            background: white;
+        }
+
+        .paging div:nth-child(1) h1 {
+            width: 25px;
+            height: 40px;
+            margin-top: 2px;
+            margin-left: 7px;
+            color: gray;
+
+        }
+
+        .paging div:nth-child(2) {
+            background-color: orange;
+        }
+
+        .paging div:nth-child(2) h1 {
+            width: 25px;
+            height: 40px;
+            margin-top: 2px;
+            margin-left: 14px;
+            color: white;
+
+        }
+
+        .paging div:nth-child(3) h1 {
+            width: 25px;
+            height: 40px;
+            margin-top: 2px;
+            margin-left: 14px;
+            color: gray;
+
+        }
+
+        .paging div:nth-child(4) h1 {
+            width: 25px;
+            height: 40px;
+            margin-top: 2px;
+            margin-left: 14px;
+            color: gray;
+
+        }
+
+        .paging div:nth-child(5) h1 {
+            width: 25px;
+            height: 40px;
+            margin-top: 2px;
+            margin-left: 14px;
+            color: gray;
+
+        }
+
+        .paging div:nth-child(6) h1 {
+            width: 25px;
+            height: 40px;
+            margin-top: 2px;
+            margin-left: 5px;
+            color: gray;
+
+        }
+
+        .paging div:nth-child(7) h1 {
+            width: 25px;
+            height: 40px;
+            margin-top: 2px;
+            margin-left: 12px;
+            color: gray;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fon">
+        <div class="navigation">
+            <div class="nav1">
+                <div><img class="img1" src="./images/3.jpg" /></div>
+                <div><a href="#">首页</a></div>
+                <div><a href="#">榜单</a></div>
+                <div><a href="#">歌手</a></div>
+                <div><a href="#">下载酷我客户端</a></div>
+            </div>
+            <div class="nav2">
+                <div class="nav2-1"><a href="#">美女秀</a></div>
+                <div class="nav2-2"><a href="#">酷我耳机</a></div>
+                <div class="nav2-3"><a href="#">VIP会员</a></div>
+                <div class="nav2-4"><a href="#">i听</a></div>
+            </div>
+            <div class="nav3">
+                <div><a href="#">更多服务</a></div>
+                <div><a href="#">登录</a></div>
+            </div>
+            <div class="nav4">
+                <div><strong>^</strong></div>
+                <div class="nav4-1">找到好音乐</div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="lyric">
+                <div class="lyric1">
+                    <h1>喜羊羊</h1>
+                    <div class="catalogue">
+                        <p>专辑：</p>
+                        <p>儿歌大全&nbsp;&nbsp;</p>
+                        <p>歌手：</p>
+                        <p>华宇群星&nbsp;&nbsp;</p>
+                        <p>分享&nbsp;</p>
+                        <img src="./images/1.jpg" />
+                        <p>&nbsp;评论</p>
+                    </div>
+                    <div class="subcategory">
+                        <p>上传时间：2015-10-02</p>
+                        <p>歌曲来源：民大相思湖网球社</p>
+                    </div>
+                    <hr />
+                    <div class="lycontent">
+                        <p>别看我只是一只羊</p>
+                        <p>绿草因为我变的更香</p>
+                        <p>天空因为我变的更蓝</p>
+                        <p>白云因为我变的柔软</p>
+                        <p>别看我只是一只羊</p>
+                        <p>羊儿的聪明难以想像</p>
+                        <p>天再高心情一样奔放</p>
+                        <p>每天都追赶太阳</p>
+                        <p>有什么难题去牵绊我都不会去心伤</p>
+                        <p>有什么危险在我面前也不会去慌乱</p>
+                        <p>就算有狼群把我追捕也当做游戏一场</p>
+                        <p>在什么时间都爱开心笑容都会飞翔</p>
+                        <p>就算会摔倒站得起来永远不会沮丧</p>
+                        <p>在所有天气拥有叫人大笑的力量</p>
+                        <p>虽然我只是羊</p>
+                        <p>喜羊羊美羊羊懒羊羊沸羊羊</p>
+                        <p>慢羊羊软绵绵红太狼灰太狼</p>
+                    </div>
+                </div>
+            </div>
+            <div class="player">
+                <div class="music">
+                    <div class="music1-1"></div>
+                    <div class="music1">
+                        <img class="record" src="./images/xiyangyang.jpg" />
+                    </div>
+                    <div class="music1-2"></div>
+                    <div class="music1-3"></div>
+                </div>
+
+                <div class="progress">
+                    <audio autoplay="autoplay" id="mymusic">
+                        <source src="./img/2.mp3" type="audio/mp3">
+                    </audio>
+                    <div class="play" id="wp_playBtn">
+                    </div>
+                    <div id="prograssBar">
+                        <div id="wp_bufBar">
+                            <div class="prograssBar" id="wp_processBar"></div>
+                            <a href="##" class="schedule_btn" id="wp_processBtn" style="left: 0;"></a>
+                        </div>
+                    </div>
+                    <div class="playerRight">
+                        <p id="wp_playTime" class="opacity">00.00</p>
+                    </div>
+                    <div id="controllBtn">
+                        <div class="sound" id="wp_mute"></div>
+                    </div>
+
+                </div>
+                <div class="download">
+                    <p class="download1"></p>
+                    <p class="download2">免费下载这首歌</p>
+                </div>
+                <div class="guoziyi">
+                    <div class="gu">
+                        <img src="./images/T.jpg" />
+                    </div>
+                    <div class="gus">
+                        <div class="gu1">
+                            <div class="gu1-1">郭子仪————h5班</div>
+                            <div class="gu1-2"></div>
+                            <div class="gu1-3">
+                                <p class="gu1-3-1">喜羊羊与灰太狼</p>
+                                <p class="gu1-3-2">去现场></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="comment">
+            <div class="title">
+                <p>评论</p>
+                <p>1703条评论</p>
+            </div>
+            <hr />
+            <div class="share" id="share">
+                <div class="headPortrait">
+                    <img class="headPortrait1" id="profile" src="./images/T.jpg" />
+                </div>
+                <div class="com">
+                    <form>
+                        <textarea cols="40" rows="8" value="" id='txt'>分享你的音乐见解</textarea>
+                        <br />
+                    </form>
+                    <div class="smile"><img src="./images/笑脸.png" /></div>
+                    <div class="word" id="word">已输入0个字</div>
+                    <div class="btn1"><input class="btn1-1" id="btnCon" type="submit" value="评论" /></div>
+                </div>
+            </div>
+            <div class="marvellous">
+                <div class="marvellous1">精彩评论</div>
+                <hr>
+                <div class="marvellous2" id="marvellous2">
+                    <div id="marvellous22"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="paging">
+            <div class="paging1">
+                <h1><</h1>
+            </div>
+            <div class="paging1">
+                <h1>1</h1>
+            </div>
+            <div class="paging1">
+                <h1>2</h1>
+            </div>
+            <div class="paging1">
+                <h1>3</h1>
+            </div>
+            <div class="paging2">
+                <h1>...</h1>
+            </div>
+            <div class="paging1">
+                <h1>17</h1>
+            </div>
+            <div class="paging1">
+                <h1>></h1>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var i = 0;
+    var j = 0;
+    var mymusic = document.getElementById("mymusic");
+    var wp_playBtn = document.getElementById("wp_playBtn");
+    var wp_playTime = document.getElementById("wp_playTime");
+    var wp_processBar = document.getElementById("wp_processBar");
+    var wp_bufBar = document.getElementById("wp_bufBar");
+    var wp_processBar = document.getElementById('wp_processBar');
+    var wp_processBtn = document.getElementById('wp_processBtn');
+    var wp_mute = document.getElementById('wp_mute');
+    wp_mute.onclick = function () {
+        if (j == 0) {
+            mymusic.muted = true;
+            j++;
+        }
+        else {
+            mymusic.muted = false;
+            j--;
+        }
+    }
+    mymusic.load();
+    wp_playBtn.onclick = function () {
+        if (i == 0) {
+            wp_playBtn.style.backgroundPosition = "-400px -272px"
+            mymusic.play();
+            i++;
+            var disctimer = setInterval(function () {
+                wp_processBar.style.width = (mymusic.currentTime / mymusic.duration.toFixed(1)) * 352 + "px";
+
+                //每秒设置进度条长度
+            }, 1000);
+            var disctimer1 = setInterval(function () {
+                wp_processBtn.style.left = (mymusic.currentTime / mymusic.duration.toFixed(1)) * 352 + "px";
+
+                //每秒设置点长度
+            }, 1000);
+
+        }
+        else {
+            wp_playBtn.style.backgroundPosition = "-210px 0px"
+            mymusic.pause();
+            i--;
+            clearInterval(disctimer);
+            clearInterval(disctimer1);
+        }
+
+
+    }
+    var timer = setInterval(function CountDown() {
+
+        var current = mymusic.currentTime;
+        if (mymusic.currentTime < 10) {
+            wp_playTime.innerHTML = "00:0" + Math.floor(mymusic.currentTime);
+        }
+        else {
+            if (mymusic.currentTime < 60) {
+                var minet = parseInt(mymusic.currentTime / 60);
+                var sec = mymusic.currentTime - minet * 60;
+                if (sec < 10) {
+                    wp_playTime.innerHTML = "0" + minet + ":" + "0" + parseInt(sec);
+                }
+                else {
+                    wp_playTime.innerHTML = "0" + minet + ":" + parseInt(sec);
+                }
+            }
+            else {
+                var minet = parseInt(mymusic.currentTime / 60);
+                var sec = mymusic.currentTime - minet * 60;
+                if (sec < 10) {
+                    wp_playTime.innerHTML = "0" + minet + ":" + "0" + parseInt(sec);
+                }
+                else {
+                    wp_playTime.innerHTML = "0" + minet + ":" + parseInt(sec);
+                }
+            }
+        }
+    }, 1000);
+
+    var txt = document.getElementById("txt");
+    var word = document.getElementById("word");
+    var btnCon = document.getElementById("btnCon");
+    var marvellous2 = document.getElementById("marvellous2");
+    var share = document.getElementById("share");
+    var profile = document.getElementById("profile");
+    var userName = document.getElementById("username");
+    txt.onkeyup = function () {
+        var textLength = txt.value.length;
+        word.innerHTML = "已输入" + textLength + "个字";
+    }
+    var a = 0;
+    var localTime, date1;
+    btnCon.onclick = function () {
+        marvellous2.innerHTML = "";
+        date1 = new Date();
+        time(date1);
+        local();
+        getNodes();
+    }
+
+    function convertTimer(start) {
+        return start < 10 ? ("0" + start) : start;
+    }
+    function time(date1) {
+        var year = date1.getFullYear();
+        var month = date1.getMonth();
+        month = month + 1;
+        var currentDay = date1.getDate();
+        var hour = date1.getHours();
+        var min = date1.getMinutes();
+        var sec = date1.getSeconds();
+        hour = convertTimer(hour);
+        min = convertTimer(min);
+        sec = convertTimer(sec);
+        localTime = year + "-" + month + "-" + currentDay + " " + hour + ":" + min + ":" + sec;
+    }
+    var s;
+    function gettingcomments() {
+        var marve = document.createElement("div");
+        var shareCom = document.createElement("div");
+        var head1 = document.createElement("img");
+        var userName = document.createElement("div");
+        var del = document.createElement("div");
+        var realTime = document.createElement("div");
+        var fabulousCount = document.createElement("div");
+        var fabulous = document.createElement("img");
+        var reply = document.createElement("div");
+        marvellous2.appendChild(head1);
+        head1.className = "head1";
+        marvellous2.appendChild(userName);
+        userName.innerHTML = "郭子仪";
+        userName.className = "userName";
+        marvellous2.appendChild(marve);
+        marvellous2.appendChild(realTime);
+        head1.src = profile.src;
+        head1.style.width = "60px";
+        marve.innerHTML = txt.value;
+        marve.className = "marve";
+        realTime.innerHTML = s;
+        realTime.className = "realTime";
+        marvellous2.appendChild(shareCom);
+        shareCom.innerHTML = "分享";
+        shareCom.className = "shareCom"
+        marvellous2.appendChild(del);
+        del.innerHTML = "删除";
+        del.className = "del"
+        marvellous2.appendChild(fabulousCount);
+        fabulousCount.innerHTML = "169";
+        fabulousCount.className = "fabulousCount"
+        marvellous2.appendChild(fabulous);
+        fabulous.src = './images/点赞.png';
+        fabulous.className = "fabulous"
+        marvellous2.appendChild(reply);
+        reply.innerHTML = "回复";
+        reply.className = "reply"
+    }
+
+    function local() {
+        var txt = document.getElementById("txt");
+        var location = localStorage['location'];
+        if (location == "" || location == null || location == undefined) {
+            localStorage['location'] = "[]";
+        }
+        var obj = {
+            profile: profile.src,
+            txt: txt.value,
+            time: localTime
+        }
+        location = JSON.parse(localStorage['location']);
+        location.unshift(obj);
+        localStorage['location'] = JSON.stringify(location);
+    }
+    function getNodes() {
+        var location = localStorage["location"];
+        location = JSON.parse(location);
+        for (var i = 0; i < location.length; i++) {
+            profile.src = location[i]["profile"];
+            txt.value = location[i]["txt"];
+            s = location[i]["time"];
+            gettingcomments();
+        }
+
+    }
+    window.onload = function () {
+        if (localStorage != "") {
+            getNodes();
+        }
+    }
+
+
+
+</script>
+
+</html>
